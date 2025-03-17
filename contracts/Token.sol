@@ -14,7 +14,7 @@ contract Token is ERC20, ERC20Burnable, ERC20Capped, Ownable {
     {}
 
     function mint(address to, uint256 amount) public onlyOwner {
-        _mint(to, amount);
+        _mint(to, amount * 1e18);
     }
 
     // Override _update to resolve ERC20 & ERC20Capped conflict
